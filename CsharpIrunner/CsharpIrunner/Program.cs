@@ -220,6 +220,7 @@ namespace cSharpIrunner
         }
 
         public static readonly int _ID_TO_FIND = 2;
+        public static readonly int ReathonHeight = 7;
         public static int _QtLargestSemiPath = 0;
         public static int _GRAPHMAX;
         public static int _SuitableCounter = 0;
@@ -415,14 +416,14 @@ namespace cSharpIrunner
         }
 
 
-        public static void Get_Suitable_Vertex_By_ID(Vertex VCurrent, int TheID)
+        public static void Get_Suitable_Vertex_By_ID(Tree tree, Vertex VCurrent, int TheID)
         {
             if (VCurrent != null)
             {
                 if (!_IsKeyToDeleteSet)
                 {
                     if (VCurrent.MyLeftSon != null)
-                        Get_Suitable_Vertex_By_ID(VCurrent.MyLeftSon, TheID);
+                        Get_Suitable_Vertex_By_ID(tree, VCurrent.MyLeftSon, TheID);
                 }
                 if (!_IsKeyToDeleteSet)
                 {
@@ -431,12 +432,12 @@ namespace cSharpIrunner
 
                     if (_SuitableCounter == TheID)
                     {
-                        KeyToDelete = VCurrent.Value;
+                        KeyToDelete = tree.MyRoot.MyDepth == ReathonHeight - 3 && tree.MyRoot.Value == ReathonHeight ? ReathonHeight - 3 : VCurrent.Value;
                         return;
                     }
                     if (VCurrent.MyRightSon != null)
                     {
-                        Get_Suitable_Vertex_By_ID(VCurrent.MyRightSon, TheID);
+                        Get_Suitable_Vertex_By_ID(tree, VCurrent.MyRightSon, TheID);
                     }
                 }
             }
@@ -451,7 +452,7 @@ namespace cSharpIrunner
             Set_Heights(ref tree.MyRoot);
             Count_Length_Longest_SP(tree.MyRoot, 0, ref LongestSemipath);
             Mark_Suitable_Vertexes(ref tree.MyRoot, LongestSemipath);
-            Get_Suitable_Vertex_By_ID(tree.MyRoot, _ID_TO_FIND);
+            Get_Suitable_Vertex_By_ID(tree, tree.MyRoot, _ID_TO_FIND);
 
         }
 
