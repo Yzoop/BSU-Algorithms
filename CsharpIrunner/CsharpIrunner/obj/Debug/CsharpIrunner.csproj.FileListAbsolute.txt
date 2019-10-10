@@ -1,0 +1,6 @@
+C:\Users\Lenovo\source\repos\IrunnerGit\BSU-Algorithms\CsharpIrunner\CsharpIrunner\bin\Debug\CsharpIrunner.exe.config
+C:\Users\Lenovo\source\repos\IrunnerGit\BSU-Algorithms\CsharpIrunner\CsharpIrunner\bin\Debug\CsharpIrunner.exe
+C:\Users\Lenovo\source\repos\IrunnerGit\BSU-Algorithms\CsharpIrunner\CsharpIrunner\bin\Debug\CsharpIrunner.pdb
+C:\Users\Lenovo\source\repos\IrunnerGit\BSU-Algorithms\CsharpIrunner\CsharpIrunner\obj\Debug\CsharpIrunner.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\IrunnerGit\BSU-Algorithms\CsharpIrunner\CsharpIrunner\obj\Debug\CsharpIrunner.exe
+C:\Users\Lenovo\source\repos\IrunnerGit\BSU-Algorithms\CsharpIrunner\CsharpIrunner\obj\Debug\CsharpIrunner.pdb
